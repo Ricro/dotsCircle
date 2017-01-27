@@ -1,0 +1,339 @@
+body{
+	background-color: rgb(22,33,93);
+    margin: 0;
+}
+.main_logo {
+	position: absolute;
+	top: calc(50% - 172px);
+	left: calc(50% - 225px);
+}
+div#underlay {
+	width: 100%;
+	position: absolute;
+	height: 0%;
+	bottom: 0;
+	background: #fb6a69;
+	left: 0;
+	transition: height 2s ease-in-out;
+}
+.logo_bleu {
+	opacity: 0;
+	z-index: 2;
+	transition: opacity 1s ease-out;
+}
+#loader_screen{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+    z-index: 990;
+
+	display: none;
+	
+	height: 100%;
+    background-color: #151f5e;
+    transition: opacity 1s ease-out;
+}
+img#logo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    cursor: pointer;
+    z-index: 100;
+    width: 110px;
+}
+#home_article {
+	width: 66.667%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url('../img/iphone.png');
+	background-size: 54%;
+	background-color: rgb(22,33,93);
+	background-repeat: no-repeat;
+	background-position: 73% 0%;
+	color: white;
+}
+#article_content{
+	position: absolute;
+	bottom: 200px;
+	left: 110px;
+	width: 400px;
+}
+#home_article .big_title {
+	font-size: 272px;
+	font-weight: bold;
+	margin: 0;
+	position: relative;
+	right: 34px;
+	top: 32px;
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+}
+#home_article .title {
+	font-size: 43px;
+	margin: 0;
+	line-height: 1.1;
+	text-transform: uppercase;
+	font-family: 'Karla', sans-serif;
+	text-align: center;
+}
+#home_article .cta {
+	font-family: 'Playfair Display', serif;
+	position: absolute;
+	font-size: 13px;
+	letter-spacing: 4px;
+	right: 30px;
+	bottom: -77px;
+    color: white;
+}
+#home_article .cta:after {
+	content: url('../img/plus.png');
+	position: relative;
+    top: 10px;
+    left: 10px;
+    transition : transform 0.3s ease-in;
+    display: inline-block;
+}
+#home_article .cta:hover:after {
+	transform: scale(1.5);
+}
+#home_sidebar {
+    width: 33.333%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow-y: scroll;
+  -webkit-overflow-scrolling: auto;
+    line-height: 0;
+}
+#home_sidebar article{
+	width: 100%;
+    height: 50%;
+    display: inline-block;
+    position: relative;
+    color: white;
+    cursor: pointer;
+}
+.cd-primary-nav article{
+	width: 50%;
+    height: 50%;
+    display: inline-block;
+    position: relative;
+    color: white;
+    cursor: pointer;
+}
+article#nouveautes {
+    background: rgb(0,94,131);
+}
+article#missions {
+    background: rgb(65,216,195);
+}
+article#our_vision {
+    background: rgb(251,171,171);
+}
+article#join_us {
+    background: rgb(167,208,230);
+}
+.article_content {
+    position: absolute;
+    width: 360px;
+    bottom: 30px;
+    left: 60px;
+}
+.article_content .under_title {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 3px;
+    font-size: 24px;
+    line-height: 1.3;
+    width: 310px;
+}
+.article_content .title {
+    text-transform: uppercase;
+    font-size: 42px;
+    font-family: 'Karla', sans-serif;
+    margin-bottom: 0px;
+}
+.article_content .title:before {
+    content: url(../img/bulle-merci.png);
+    position: absolute;
+    top: 63px;
+    left: 1px;
+}
+.image_content{
+	width: 100%;
+	text-align: center;
+	margin-top: 20px;
+}
+.arrow_down {
+    position: fixed;
+    bottom: 30px;
+    right: calc(16.5% - 50px);
+    z-index: 3;
+    cursor: pointer;
+    animation-name: updown;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+@keyframes updown {
+    0%   {bottom: 30px; opacity:1;}
+    100% {bottom: 10px; opacity:0;}
+}
+
+#home_sidebar article:hover, {
+	filter: grayscale(10%)
+}
+#nav article:hover > .overlay, #home_sidebar article:hover > .overlay {
+    width:100%;
+    height:100%;
+    position:absolute;
+    background-color:#000;
+    opacity:0.15;
+}
+.contact_icons div {
+    display: inline-block;
+    position: relative;
+}
+.social_icons {
+    top: 5px;
+}
+.lang_icons {
+    float: right;
+    right: 50px;
+}
+.contact_icons {
+    position: absolute;
+    bottom: 60px;
+    width: 70%;
+}
+.contact_mail {
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    letter-spacing: 3px;
+    margin-bottom: 0;
+}
+.contact_title {
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Karla', sans-serif;
+    font-size: 19px;
+    letter-spacing: 2px;
+    position: relative;
+}
+.contact_title:before{
+    content: url(../img/bulle-merci.png);
+    position: absolute;
+    top: 23px;
+    left: 1px;
+}
+#home_sidebar .article_content .title{
+	height: 18px;
+}
+.image_content img {
+    width: 65%;
+}
+.contact_form .cta:after {
+	content: url('../img/fleche-droite.png');
+	position: relative;
+    top: 10px;
+    left: 10px;
+    transition : transform 0.3s ease-in;
+    display: inline-block;
+}
+.contact_form .cta:hover:after {
+	transform: scale(1.5);
+}
+.contact_form .cta {
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    font-size: 13px;
+    letter-spacing: 4px;
+    right: 2px;
+    width: 91px;
+    color: white;
+}
+.contact_form {
+    position: relative;
+}
+#transition_page_overlay{
+	position: absolute;
+	display: none;
+	z-index: 4;
+}
+
+@media screen and (max-width: 920px) {
+	#home_article {
+	    width: 100%;
+	    height: 570px;
+	    position: relative;
+	    top: 0;
+	    display: inline-block;
+	    left: 0;
+	    background-image: url(../img/iphone.png);
+	    background-size: 54%;
+	    background-color: rgb(22,33,93);
+	    background-repeat: no-repeat;
+	    background-position: 73% 0%;
+	    color: white;
+	}
+	#home_sidebar {
+	    width: 100%;
+	    height: 100%;
+	    position: relative;
+	    top: 0;
+	    right: 0;
+	    display: inline-block;
+	    overflow-y: scroll;
+	    -webkit-overflow-scrolling: auto;
+	    /* word-spacing: 0; */
+	    line-height: 0;
+	}
+	#home_sidebar article {
+	    width: 50%;
+	    height: 330px;
+	    display: inline-block;
+	    position: relative;
+	    color: white;
+	    cursor: pointer;
+	}
+	.image_content img {
+	    width: 250px;
+	}
+	.image_content {
+		margin-top: 0;
+	}
+	.article_content {
+	    width: 360px;
+	    bottom: 10px;
+	    left:30px;
+	}
+	.article_content .title {
+		font-size: 32px;
+	}
+	.article_content .title:before {
+		top: 50px;
+	}
+	.article_content .under_title {
+		font-size: 16px;
+		margin-top: 44px;
+	}
+	#article_content {
+	    bottom: 100px;
+	    left: 40px;
+	}
+	#home_article .big_title {
+	    font-size: 191px;
+	    right: 12px;
+	}
+	#home_article .title {
+	    font-size: 33px;
+	}
+	#home_article{
+		background-position: 89% -5%;
+	}
+}
+
